@@ -18,7 +18,9 @@ import { RefillPipe } from './refill.pipe';
   </select>
   <keg-display *ngFor="#currentKeg of kegList | refill:filterRefill"
     (click)="kegClicked(currentKeg)"
+    [class.expensive]="currentKeg.price > 5"
     [class.selected]="currentKeg === selectedKeg"
+    [class.strong-beer]="currentKeg.alcohol > 5"
     [keg]="currentKeg">
   </keg-display>
   <hr>
