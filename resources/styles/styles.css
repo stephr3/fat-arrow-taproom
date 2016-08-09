@@ -2,6 +2,20 @@ h1 {
   color: blue;
 }
 
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .selected {
   color: #22bdf0;
+}
+
+edit-keg-details h3 {
+  display: inline;
+}
+
+.task-form {
+  margin: 8px 0 0 8px;
 }
