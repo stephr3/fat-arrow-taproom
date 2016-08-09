@@ -1,11 +1,26 @@
 import { Component } from 'angular2/core';
 
 @Component({
+  selector: 'keg-list',
+  inputs: ['kegList'],
+  template: `
+  <h3 *ngFor="#currentKeg of kegList" (click)="kegClicked(currentKeg)">{{ currentKeg.name }}, Brand: {{ currentKeg.brand }}, Style: {{ currentKeg.style }}, Price: {{ currentKeg.price }}, Alcohol: {{ currentKeg.alcohol }}, Pints: {{ currentKeg.pints }}</h3>
+  `
+})
+export class KegListComponent {
+  public kegList: Keg[];
+  kegClicked(clickedKeg: Keg): void {
+    console.log(clickedKeg);
+  }
+}
+
+@Component({
   selector: 'my-app',
+  directives: [KegListComponent],
   template: `
     <div class="container">
       <h1>Fat Arrow => Taproom</h1>
-      <h3 *ngFor="#keg of kegs" (click)="kegWasSelected(keg)">{{ keg.name }}, Brand: {{ keg.brand }}, Style: {{ keg.style }}, Price: {{ keg.price }}, Alcohol: {{ keg.alcohol }}, Pints: {{ keg.pints }}</h3>
+      <keg-list [kegList]="kegs"></keg-list>
     </div>
   `
 })
