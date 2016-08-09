@@ -6,8 +6,13 @@ import { Keg } from './keg.model';
   selector: 'my-app',
   directives: [KegListComponent],
   template: `
-    <div class="container">
+    <div class="jumbotron">
       <h1>Fat Arrow => Taproom</h1>
+    </div>
+    <div class="container">
+      <div class="fat-arrow-fathers">
+        <img src="./../resources/images/barrel.jpg">
+      </div>
       <keg-list
         [kegList]="kegs"
         (onKegSelect)="kegWasSelected($event)">

@@ -5,8 +5,10 @@ import { Keg } from './keg.model';
   selector: 'keg-display',
   inputs: ['keg'],
   template: `
-    <h3>"{{ keg.name }}", Brand: {{ keg.brand }}, Style: {{ keg.style }}, Price: \${{ keg.price }}, Alcohol: {{ keg.alcohol }}%, Pints#: {{ keg.pints }}</h3>
-    <button (click)="subtractPint(keg)" class="btn btn-success btn-lg"> - </button>
+    <row>
+      <div class="col-md-1"><button (click)="subtractPint(keg)" class="btn btn-lg"> - </button></div>
+      <h3 class="col-md-11">"{{ keg.name }}", Brand: {{ keg.brand }}, Style: {{ keg.style }}, Price: \${{ keg.price }}, Alcohol: {{ keg.alcohol }}%, Pints#: {{ keg.pints }}</h3>
+    </row>
   `
 })
 export class KegComponent {

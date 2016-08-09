@@ -1,5 +1,31 @@
-h1 {
-  color: blue;
+.jumbotron {
+  background-color: #fcfdaf;
+  color: #dba159;
+  text-align: center;
+}
+
+.fat-arrow-fathers {
+  max-width: 50%;  
+}
+
+.btn {
+  background-color: #dba159;
+  border: #dba159;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #fca159;
+  color: #fcfdaf;
+}
+
+body {
+  background-color: #f7ffdd;
+}
+
+select {
+  max-width: 200px;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -17,14 +43,18 @@ ul {
 }
 
 .selected {
-  color: #22bdf0;
+  color: #fca159;
 }
 
-
-edit-keg-details h3 {
-  display: inline;
+keg-display li {
+  display: inline-block;
 }
 
-.keg-form {
-  margin: 8px 0 0 8px;
+#key {
+  background-color: #fca159;
+  border-radius: 10px;
+  font-size: 20px;
+  max-width: 200px;
+  margin-bottom: 10px;
+  padding: 5px;
 }
