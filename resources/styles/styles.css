@@ -4,8 +4,9 @@
   text-align: center;
 }
 
-.fat-arrow-fathers {
-  max-width: 50%;  
+.fat-arrow-fathers img{
+  max-width: 80%;
+  margin: auto;
 }
 
 .btn {

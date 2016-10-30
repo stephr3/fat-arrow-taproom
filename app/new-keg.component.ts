@@ -5,6 +5,7 @@ import { Keg } from './keg.model';
   selector: 'new-keg',
   outputs: ['onSubmitNewKeg'],
   template: `
+  <div class="container">
     <h3>Add a New Keg:</h3>
     <input placeholder="Name" class="col-sm-6 input-lg" #newName>
     <input placeholder="Brand" class="col-sm-6 input-lg" #newBrand>
@@ -12,6 +13,7 @@ import { Keg } from './keg.model';
     <input placeholder="Price" class="col-sm-6 input-lg" #newPrice>
     <input placeholder="Proof" class="col-sm-6 input-lg" #newProof>
     <button (click)="addKeg(newName, newBrand, newStyle, newPrice, newProof)" class="btn btn-success btn-lg">Add</button>
+  </div>
   `
 })
 export class NewKegComponent {
